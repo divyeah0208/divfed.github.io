@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Clone</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="images/spotify.PNG" alt="Spotify">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Search</a></li>
+          <li><a href="#">Your Library</a></li>
+        </ul>
+      </nav>
+      <div class="create-playlist">
+        <h2>Create your first playlist</h2>
+        <p>It's easy, we'll help you</p>
+        <button>Create playlist</button>
+      </div>
+      <ul class="sidebar-links">
+        <li><a href="#">Legal</a></li>
+        <li><a href="#">Privacy Center</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Cookies</a></li>
+        <li><a href="#">About Ads</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+      <button class="language-button">English</button>
+    </aside>
+    <main class="main-content">
+      <header>
+        <button class="sidebar-toggle">☰</button>
+        <div class="user-actions">
+          <button class="sign-up">Sign up</button>
+          <button class="log-in">Log in</button>
+        </div>
+      </header>
+      <section class="popular-artists">
+        <h2>Popular artists</h2>
+        <div class="artist-list">
+          <!-- Artist items will be injected here by JavaScript -->
+        </div>
+        <a href="#" class="show-all">Show all</a>
+      </section>
+      <section class="popular-albums">
+        <h2>Popular albums</h2>
+        <div class="album-list">
+          <!-- Album items will be injected here by JavaScript -->
+        </div>
+        <a href="#" class="show-all">Show all</a>
+      </section>
+    </main>
+  </div>
+  <footer>
+    <div class="footer-banner">
+      <p>Preview of Spotify</p>
+      <p>Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.</p>
+      <button class="sign-up-footer">Sign up free</button>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

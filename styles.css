@@ -1,0 +1,273 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.sidebar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar nav ul li a {
+  color: #b3b3b3;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
+.sidebar nav ul li a:hover {
+  color: #fff;
+}
+
+.sidebar .create-playlist {
+  margin-top: 20px;
+}
+
+.sidebar .create-playlist h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.sidebar .create-playlist p {
+  font-size: 14px;
+  color: #b3b3b3;
+}
+
+.sidebar .create-playlist button {
+  background-color: #1db954;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.sidebar .create-playlist button:hover {
+  background-color: #1ed760;
+}
+
+.sidebar .legal {
+  margin-top: 20px;
+}
+
+.sidebar .legal a {
+  color: #b3b3b3;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.sidebar .legal a:hover {
+  color: #fff;
+}
+
+.sidebar .language-button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #1db954;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.sidebar .language-button:hover {
+  background-color: #1ed760;
+}
+
+.main-content {
+  margin-left: 250px;
+  flex-grow: 1;
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar-open .sidebar {
+  transform: translateX(0);
+}
+
+.sidebar-open .main-content {
+  margin-left: 250px;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px;
+  background-color: #282828;
+}
+
+header .user-actions button {
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 10px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+header .user-actions .sign-up {
+  border-color: #1db954;
+  color: #1db954;
+}
+
+header .user-actions button:hover {
+  background-color: #1db954;
+  color: #fff;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-header h2 {
+  font-size: 24px;
+}
+
+.section-header a {
+  color: #1db954;
+  text-decoration: none;
+}
+
+.artist-list,
+.album-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.artist,
+.album {
+  width: calc(33.333% - 20px);
+  background-color: #181818;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+}
+
+.artist img,
+.album img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.artist p,
+.album p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.artist span,
+.album span {
+  font-size: 14px;
+  color: #b3b3b3;
+}
+
+.footer-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #6a0a97;
+  text-align: center;
+  margin-top: auto; /* Ensure it sticks to the bottom */
+  width: 100%;
+}
+
+.footer-banner p {
+  margin-bottom: 10px;
+}
+
+.footer-banner .sign-up-footer {
+  padding: 10px 20px;
+  background-color: #1db954;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.footer-banner .sign-up-footer:hover {
+  background-color: #1ed760;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .artist,
+  .album {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .artist,
+  .album {
+    width: 100%;
+  }
+}
+
+
+
